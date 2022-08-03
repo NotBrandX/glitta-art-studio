@@ -24,8 +24,8 @@
 
         <ul class="navbar">
             <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
@@ -35,7 +35,6 @@
         <div class="home-text">
             <h1>Glitta Art Studio</h1>
             <h2>High Quality Art <br> For Sale</h2>
-            <a href="#" class="btn">Featured Piece</a>
         </div>
 
         <div class="home-img">
@@ -59,7 +58,7 @@
             consectetur ante tincidunt. Sed pellentesque tellus sit amet convallis suscipit. Mauris vulputate consectetur nibh, eget
             varius ipsum feugiat ut. Nullam elementum hendrerit erat ac dignissim. Donec lacus magna, sodales eget augue quis,
             gravida aliquet justo.</p>
-            <a href="#" class="btn">Featured Piece</a>
+
         </div>
     </section>
 
@@ -69,7 +68,7 @@
             <span>Gallery</span>
             <h2>Current artwork for sale</h2>
         </div>
-
+    
         <div class="image-gallery">
             <div class="image-box">
                 <img src="img/paintbrush.jpeg" alt="paintbrush">
@@ -176,10 +175,28 @@
                 </div>
             </div>
         </div>
-        
+    
     </section>
 
     <!-- Contact-->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-text">
+                <span>Contact</span>
+                <h2>Contact below to inquire about the pieces</h2>
+            <div class="form-center">
+                <form action="https://formsubmit.co/glittartstudios@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New email for Glitta Art Studio">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="Message" placeholder="Message Here" required></textarea>
+                    <input type="hidden" name="_next" value="https://glittartstudio.com/thankyou.html">
+                    <button type="submit" class="btn">Send</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 
