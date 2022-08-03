@@ -258,6 +258,43 @@ section {
     font-size: var(--h2-font);
 }
 
+.contact-text {
+    text-align: center;
+}
+
+.contact-text span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.contact-text h2 {
+    font-size: var(--h2-font);
+}
+
+.form-center {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    gap: 1rem;
+    
+}
+
+input, select, textarea {
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid #d7d7d8;
+    color: #fff;
+}
+
+textarea {
+    height: 6rem;
+}
+
 /* make gallery responsive */
 @media(max-width:768px) {
     .image-gallery {
