@@ -97,18 +97,11 @@ section {
     margin: 1rem 0 2rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    color: #fff;
-    border-radius: 0.5rem;
+button {
+    background-color: var(--bg-color);
+    border: none;
 }
 
-.btn:hover {
-    transform: scale(1.2) translate(10px);
-    transition: .4s;
-}
 
 .about {
     display: grid;
@@ -311,24 +304,27 @@ textarea {
     section {
         padding: 50px 8%;
     }
-    #menu-icon {
-        display: initial;
-        color: var(--text-color);
-    }
-    header .navbar {
-        position: absolute;
-        top: -400px;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: #2b2640;
-        transition: .3s;
-    }
-        header .navbar .active {
+        #menu-icon {
+            display: initial;
+            color: var(--text-color);
+        }
+    
+        header .navbar {
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 0.3s;
+        }
+    
+        header .navbar.active {
             top: 70px;
         }
+    
         .navbar a {
             padding: 1.5rem;
             display: block;
