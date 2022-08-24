@@ -277,29 +277,28 @@ section {
     font-size: var(--h2-font);
 }
 
-.form-center {
-    display: flex;
-    justify-content: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 24rem;
-    gap: 1rem;
-    
-}
-
 input, select, textarea {
-    padding: 1.4rem;
-    background: transparent;
-    border: 1px solid #d7d7d8;
+    background: #2b2640;
     color: #fff;
+    width: 46%;
+    margin: 20px 1%;
+    border:0px;
+    border-bottom:2px solid rgba(255,255,255,0.5);
+    padding:8px 10px;
+     font-size:18px;
+    transition:0.4s ease-in-out;
 }
 
-textarea {
-    height: 6rem;
+form input:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
 }
+
+form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
 
 /* media queries*/
 
