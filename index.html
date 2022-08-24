@@ -337,25 +337,19 @@
                 <span>Contact</span>
                 <h2>Contact below to inquire about the pieces</h2>
             <div class="form-center">
-                <form name='contact' method='POST' netlify-honeypot="bot-field" data-netlify='true'>
-                    <input type="hidden" name="form-name" value="contact">
+                <form name="contact" method="POST" data-netlify="true">
                     <p>
-                        <label>
-                            Your Name: <input type='text' name='name' />
-                        </label>
+                        <label>Your Name: <input type="text" name="name" /></label>
                     </p>
                     <p>
-                        <label>
-                            Your Email: <input type='email' name='email' />
-                        </label>
+                        <label>Your Email: <input type="email" name="email" /></label>
+                    </p>
+                    
+                    <p>
+                        <label>Message: <textarea name="message" rows="6"></textarea></label>
                     </p>
                     <p>
-                        <label>
-                            Message: <textarea name='message' rows='6' cols='30'></textarea>
-                        </label>
-                    </p>
-                    <p>
-                        <button class="btn">Send</button>
+                        <button type="submit" class="btn">Send</button>
                     </p>
                 </form>
                 </div>
