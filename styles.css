@@ -1,0 +1,369 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color:#c339ed;
+    --text-color: #fff;
+    --bg-color:#1e1c2a;
+    --big-font:5rem;
+    --h2-font:2.25rem;
+    --p-font:0.9rem;
+}
+
+*::selection {
+   background: var(--main-color);
+   color: #fff; 
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+    background: var(--bg-color);
+}
+
+.logo {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    transition: .4s;
+}
+
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    padding: 180px 17%;
+}
+
+.home {
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+}   
+
+.home-img img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+}
+
+.home-text h1 {
+    font-size: var(--big-font);
+    color: var(--main-color);
+}
+
+.home-text h2 {
+    font-size: var(--h2-font);
+    margin: 1rem 0 2rem;
+}
+
+.btn-one {
+    background-color: var(--bg-color);
+    border: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.btn:hover {
+    transform: scale(1.2) translate(10px);
+    transition: .4s;
+}
+
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+
+.about-img img {
+    max-width: 100%;
+    width: 480px;
+    height: auto;
+}
+
+.about-text span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+}
+
+.about-text p {
+    margin: 0.8rem 0 1.8rem;
+    line-height: 1.7;
+}
+
+.gallery {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.image-gallery {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+}
+
+.image-gallery .image-box {
+    position: relative;
+    background-color: #d7d7d8;
+    overflow: hidden;
+}
+
+.image-gallery .image-box:nth-child(7n + 1){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.image-gallery .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.image-gallery .image-box:hover img {
+    transform: scale(1.1);
+}
+
+.image-gallery .image-box .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fafaf2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.image-gallery .image-box:hover .overlay {
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    opacity: 1;
+}
+
+.image-gallery .image-box .details {
+    text-align: center;
+}
+
+.image-gallery .image-box .details .title {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    top: -5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.image-gallery .image-box .details .category {
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    bottom: -5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.image-gallery .image-box:hover .details .title {
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s 0.2s ease;
+}
+
+.image-gallery .image-box:hover .details .category {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s 0.2s ease;
+}
+
+.image-gallery .image-box .details .title a,
+.image-gallery .image-box .details .category a {
+    color: #222222;
+    text-decoration: none;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.heading h2 {
+    font-size: var(--h2-font);
+}
+
+.contact-text {
+    text-align: center;
+}
+
+.contact-text span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.contact-text h2 {
+    font-size: var(--h2-font);
+}
+
+input, select, textarea {
+    background: #2b2640;
+    color: #fff;
+    width: 46%;
+    margin: 20px 1%;
+    border:0px;
+    border-bottom:2px solid rgba(255,255,255,0.5);
+    padding:8px 10px;
+     font-size:18px;
+    transition:0.4s ease-in-out;
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+
+/* media queries*/
+
+@media(max-width: 1560px) {
+    header {
+        padding: 15px 40px;
+    }
+    :root {
+        --big-font:3.5rem;
+        --h2-font:2rem;
+    }
+}
+
+@media(max-width: 1140px) {
+    section {
+        padding: 50px 8%;
+    }
+        #menu-icon {
+            display: initial;
+            color: var(--text-color);
+        }
+    
+        header .navbar {
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 0.3s;
+        }
+    
+        header .navbar.active {
+            top: 70px;
+        }
+    
+        .navbar a {
+            padding: 1.5rem;
+            display: block;
+        }
+        .col {
+            width: 50%;
+            margin-bottom: 10px;
+        }
+}
+
+@media(max-width: 720px) {
+    header {
+        padding: 10px 16px;
+    }
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-img {
+        order: 2;
+    }
+
+    section {
+        padding: 100px 7%;
+    }
+}
