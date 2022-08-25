@@ -81,7 +81,6 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
     align-items: center;
-    /* margin: 3rem; */
     margin-bottom: 6rem;
 }   
 
@@ -171,14 +170,13 @@ section {
 
 .image-gallery .image-box {
     position: relative;
-    background-color: #d7d7d8;
     overflow: hidden;
 }
 
-.image-gallery .image-box:nth-child(7n + 1){
+/* .image-gallery .image-box:nth-child(7n + 1){
     grid-column: span 2;
     grid-row: span 2;
-}
+} */
 
 .image-gallery .image-box img {
     width: 100%;
