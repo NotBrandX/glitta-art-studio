@@ -11,7 +11,7 @@
 }
 
 :root {
-    --main-color:#ba8f07;
+    --main-color: #d4af37;
     --text-color: #fff;
     --bg-color:#1e1c2a;
     --big-font:5rem;
@@ -108,7 +108,7 @@ section {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: var(--main-color);
+    background: #ba8f07;
     color: #fff;
     border-radius: 0.5rem;
 }
@@ -173,11 +173,6 @@ section {
     overflow: hidden;
 }
 
-/* .image-gallery .image-box:nth-child(7n + 1){
-    grid-column: span 2;
-    grid-row: span 2;
-} */
-
 .image-gallery .image-box img {
     width: 100%;
     height: 100%;
@@ -205,6 +200,14 @@ section {
 }
 
 .image-gallery .image-box:hover .overlay {
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    opacity: 1;
+}
+
+.image-gallery .image-box:hover, .image-box:active .overlay {
     top: 20px;
     right: 20px;
     bottom: 20px;
@@ -244,7 +247,21 @@ section {
     transition: all 0.3s 0.2s ease;
 }
 
+.image-gallery .image-box:hover, .image-box:active .details .title {
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s 0.2s ease;
+}
+
 .image-gallery .image-box:hover .details .category {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s 0.2s ease;
+}
+
+.image-gallery .image-box:hover, .image-box:active .details .category {
     bottom: 0;
     opacity: 1;
     visibility: visible;
