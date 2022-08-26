@@ -81,7 +81,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
     align-items: center;
-    margin-bottom: 6rem;
+    margin-bottom: 6.6rem;
 }   
 
 .home-img img {
@@ -183,6 +183,12 @@ section {
 .image-gallery .image-box:hover img {
     transform: scale(1.1);
 }
+.image-gallery .image-box:active img {
+    transform: scale(1.1);
+}
+.image-gallery .image-box:focus img {
+    transform: scale(1.1);
+}
 
 .image-gallery .image-box .overlay {
     position: absolute;
@@ -206,8 +212,14 @@ section {
     left: 20px;
     opacity: 1;
 }
-
-.image-gallery .image-box:hover, .image-box:active .overlay {
+.image-gallery .image-box:active .overlay {
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    opacity: 1;
+}
+.image-gallery .image-box:focus .overlay {
     top: 20px;
     right: 20px;
     bottom: 20px;
@@ -246,8 +258,13 @@ section {
     visibility: visible;
     transition: all 0.3s 0.2s ease;
 }
-
-.image-gallery .image-box:hover, .image-box:active .details .title {
+.image-gallery .image-box:active .details .title {
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s 0.2s ease;
+}
+.image-gallery .image-box:focus .details .title {
     top: 0px;
     opacity: 1;
     visibility: visible;
@@ -260,8 +277,13 @@ section {
     visibility: visible;
     transition: all 0.3s 0.2s ease;
 }
-
-.image-gallery .image-box:hover, .image-box:active .details .category {
+.image-gallery .image-box:active .details .category {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s 0.2s ease;
+}
+.image-gallery .image-box:focus .details .category {
     bottom: 0;
     opacity: 1;
     visibility: visible;
