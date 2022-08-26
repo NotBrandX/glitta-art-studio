@@ -252,31 +252,6 @@ section {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 989px) {
-    .image-gallery .image-box:hover img {
-            transform: scale(1.1);
-        }
-    .image-box:hover .overlay {
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
-    opacity: 1;
-    }
-    .image-box:hover .details .title {
-    top: 0px;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s 0.2s ease;
-    }
-    .image-box:hover .details .category {
-    bottom: 0;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s 0.2s ease;
-    }
-}
-
 .heading {
     text-align: center;
 }
