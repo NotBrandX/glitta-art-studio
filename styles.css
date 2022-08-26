@@ -162,7 +162,7 @@ section {
     margin: 0 auto;
     padding: 50px 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 250px;
     grid-auto-flow: dense;
     grid-gap: 20px;
@@ -181,12 +181,6 @@ section {
 }
 
 .image-gallery .image-box:hover img {
-    transform: scale(1.1);
-}
-.image-gallery .image-box:active img {
-    transform: scale(1.1);
-}
-.image-gallery .image-box:focus img {
     transform: scale(1.1);
 }
 
@@ -212,14 +206,9 @@ section {
     left: 20px;
     opacity: 1;
 }
-.image-gallery .image-box:active .overlay {
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
-    opacity: 1;
-}
-.image-gallery .image-box:focus .overlay {
+
+.image-gallery .image-box:hover,
+.image-box:active .overlay {
     top: 20px;
     right: 20px;
     bottom: 20px;
@@ -258,13 +247,9 @@ section {
     visibility: visible;
     transition: all 0.3s 0.2s ease;
 }
-.image-gallery .image-box:active .details .title {
-    top: 0px;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s 0.2s ease;
-}
-.image-gallery .image-box:focus .details .title {
+
+.image-gallery .image-box:hover,
+.image-box:active .details .title {
     top: 0px;
     opacity: 1;
     visibility: visible;
@@ -277,13 +262,9 @@ section {
     visibility: visible;
     transition: all 0.3s 0.2s ease;
 }
-.image-gallery .image-box:active .details .category {
-    bottom: 0;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s 0.2s ease;
-}
-.image-gallery .image-box:focus .details .category {
+
+.image-gallery .image-box:hover,
+.image-box:active .details .category {
     bottom: 0;
     opacity: 1;
     visibility: visible;
@@ -295,6 +276,31 @@ section {
     color: #222222;
     text-decoration: none;
 }
+
+/* @media only screen and (max-width: 989px) {
+    .image-gallery .image-box:hover img {
+            transform: scale(1.1);
+        }
+    .image-box:hover .overlay {
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    opacity: 1;
+    }
+    .image-box:hover .details .title {
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s 0.2s ease;
+    }
+    .image-box:hover .details .category {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s 0.2s ease;
+    }
+} */
 
 .heading {
     text-align: center;
