@@ -81,7 +81,6 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
     align-items: center;
-    margin-bottom: 17.9rem;
 }   
 
 .home-img img {
@@ -116,6 +115,10 @@ section {
 .btn:hover {
     transform: scale(1.2) translate(10px);
     transition: .4s;
+}
+
+.painter {
+    margin-bottom: 6rem;
 }
 
 .span-text {
